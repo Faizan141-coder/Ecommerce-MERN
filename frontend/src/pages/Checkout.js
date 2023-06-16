@@ -1,10 +1,14 @@
 import { useState } from "react"
 import {useSelector} from 'react-redux'
 import StripeCheckout from 'react-stripe-checkout';
+import { useNavigate } from "react-router-dom";
 function Checkout(){
-
+    const navigate = useNavigate()
+    let navigateToCart = () => {
+        navigate('/CartPage')
+    }
     const cart = useSelector((state)=>state.cartReducer.cart)
-
+    
     const createOrder = async (order) => {
         
         try {
@@ -84,13 +88,14 @@ function Checkout(){
 
 
     return (
-        <div>
-            <h1 style={{color:"white"}}>Checkout</h1>
+        <div style={{"margin-top":"10%"}}>
+            <h1 style={{color:"white", "margin-left":"45%"}}>Checkout</h1>
             <div style={{margin:"20px", marginLeft:"0px"}}>
-                <p style={{color:"white"}}><b>Payment Method:</b> Stripe</p>
-                <p style={{color:"white"}}><b>Total Amount: </b>{cart.totalPrice}</p>
+                <p style={{color:"white", "margin-left":"44.5%"}}><b>Payment Method:</b> Stripe</p>
+                <p style={{color:"white", "margin-left":"47%"}}><b>Total Amount: </b>{cart.totalPrice}</p>
             </div>
             <div>
+                 <button style={{position:"absolute", top:"250px", "margin-left":"47.5%", "margin-top":"10%"}} onClick={navigateToCart}>Back</button>
                 <StripeCheckout
                 stripeKey="pk_test_51N7zHbGB2OeWYDkD9yWvcbD1F7N5FXp2qMsC53cNTwx5y8SVNWWkHju32qvEHuj270k5yyTzKobYewyAIHfBSYO900J2UNkslG" 
                 token={makePayment}
@@ -98,7 +103,7 @@ function Checkout(){
                 amount={cart.totalPrice * 100}
                 billingAddress
                 shippingAddress
-                style={{position:"absolute", left:"-1050px", top:"200px"}}
+                style={{position:"absolute", "margin-left":"46.8%", "margin-top":"1%"}}
                 />
             </div>
         </div>

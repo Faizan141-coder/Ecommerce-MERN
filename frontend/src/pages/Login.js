@@ -61,7 +61,7 @@ const Login = () => {
     <h3>
         Email:
         </h3>
-        <input type="text" value={username} onChange={handleUsername} />
+        <input type="email" value={username} onChange={handleUsername} />
     <h3> Password: </h3>
         <input type="password" value={password} onChange={handlePasswordChange} />
       <button type="submit">Login</button>

@@ -32,16 +32,25 @@ const NavBar =()=>{
         <nav>
         <div className="nav-header"> <span className="nav-logo">EcommerceApp</span> </div>
       
-        <ul className="nav-links">         
+        <ul className="nav-links">  
+         {role==='default' &&       
             <li><Link to="/"><span>Login</span></Link></li>
+         }
+             {role==='default' &&    
             <li><Link to="/signUp"><span>Signup</span></Link></li>
-            
-            <li ><Link to="/EvidencePage"><span>Products</span></Link></li>
+             }
            
+                     {(role === 'admin' || role==='seller' || role==='buyer') && (
+  <li>
+     <li ><Link to="/EvidencePage"><span>Products</span></Link></li>
+  </li>
+)}
+
+
             {role==='seller' &&
             <li><Link to="/GhostPage"><span>ManageProducts</span></Link></li>
             }
-           {(role === 'admin' ) && (
+           {(role === 'admin' || role==='rider') && (
   <li>
     <Link to="/ManageOrders">
       <span>ManageOrders</span>
