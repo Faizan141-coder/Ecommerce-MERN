@@ -50,6 +50,7 @@ form button {
   text-decoration: none;
   font-size: 16px;
   color: #fff;
+  cursor: pointer;
 }
 
 form {
@@ -216,6 +217,7 @@ nav {
 }
 
 button {
+  cursor: pointer;
   display: flex;
   margin-left: 85%;
   margin-top: -20px;
@@ -232,7 +234,7 @@ button {
 }
 
 .card button {
-
+  cursor: pointer;
   display: flex;
   margin-left: 0%;
   margin-top: 40px;
@@ -265,6 +267,7 @@ button {
 }
 
 .container button {
+  cursor: pointer;
 
   margin-left: 0;
   margin-top: 0px;
@@ -279,6 +282,7 @@ button {
 }
 
 .start-button {
+  cursor: pointer;
   width: 16%;
   margin-left: 300px;
   margin-top: -65px;
@@ -286,6 +290,7 @@ button {
 }
 
 .reset-button {
+  cursor: pointer;
   width: 16%;
   margin-left: 80%;
   margin-top: -79px;
@@ -529,6 +534,7 @@ input {
 
 
 .button1 {
+  cursor: pointer;
   background: var(--primary);
   border: 0;
   margin-top: 13px;
@@ -572,6 +578,7 @@ input.error {
 }
 
 .checkout-button {
+  cursor: pointer;
   margin-left: 73%;
   margin-top: 1%;
 }
