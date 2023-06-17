@@ -20,6 +20,8 @@ dependencies:
 
 4. This will run the backend server on the specified port
 
+### Frontend Setup
+
 5. Now navigate to the frontend folder of the project and run the following command
 
    ```shell
