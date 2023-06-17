@@ -28,7 +28,7 @@ dependencies:
 6. After the dependencies are installed, start the frontend server with the follwoing command:
 
     ```shell
-   npm install
+   npm start
 
 ## Usage
 Once both the backend and frontend servers are running, you can access the Ecommerce project in your browser by visiting http://localhost:3000 or the specified port for the frontend server.
