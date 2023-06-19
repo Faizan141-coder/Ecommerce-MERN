@@ -3,7 +3,7 @@ module.exports = function (app) {
     app.use(
       ["/user/","/product/","/order/","/delivery/","/checkout/"],
       createProxyMiddleware({
-        target: "https://ecommerce-mern-backend-nine.vercel.app/",
+        target: "http://localhost:5000",
         changeOrigin: true,
       })
     );
